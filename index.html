@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>단어 테스트!</title>
+  <style>
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    #app {
+      border: 1px black solid;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(249, 247, 255);
+      display: grid;
+      grid-template-rows: 1fr 4fr 1fr;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    #header {
+      border: 1px black solid;
+      width: 90vw;
+      height: 16vh;
+      background-color: rgb(255, 255, 255);
+      display: grid;
+    }
+
+    #main {
+      border: 1px black solid;
+      width: 90vw;
+      height: 64vh;
+      background-color: white;
+      display: grid;
+      grid-template-rows: 5fr 1fr;
+      font-size: 10vw;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    #content {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    #grading {
+      width: 90vw;
+      height: 10vh;
+      background-color: lavenderblush;
+      font-size: 3vw;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .grading {
+      border: 1px solid black;
+      background-color: aliceblue;
+      width: 43vw;
+      height: 8vh;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+
+    #footer {
+      border: 1px black solid;
+      width: 90vw;
+      height: 16vh;
+      background-color: white;
+      display: grid;
+    }
+
+    select:focus {
+      background-color: ivory;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="header">
+      <form>
+        <p>불러 올 데이터의 날짜를 선택하세요.</p>
+        <label>시작 :
+          <select id="startDay">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </label>
+        <label>
+          끝 :
+          <select id="endDay">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </label>
+        <input type="button" value="Go!" id="startBtn">
+      </form>
+    </div>
+    <div id="main">
+      <div id="content">
+        Click Me!
+      </div>
+      <div id="grading">
+        <div class="grading" id="correct">O</div>
+        <div class="grading" id="wrong">X</div>
+      </div>
+    </div>
+    <div id="footer">Footer</div>
+  </div>
+  <script type="module" src="main.mjs"></script>
+</body>
+
+</html>
